@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot the Difference Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu-screen" class="menu-screen">
+        <h1>
+            <img src="eklavya.png" alt="Eklavya Logo" style="width: 250px; height: auto; vertical-align: middle;">
+
+        </h1>
+        <h1>Woodland Creatures</h1>
+        <h3>Spot the Difference</h3>
+        <button id="play-button" class="menu-button">Play</button>
+        <button id="portfolio-button" class="menu-button">Check out my Games</button>
+        
+        <div class="menu-footer">
+            <p>Game made by K U Shashanth For Eklavya.me with love</p>
+            <p>Looking forward to working with eklavya ♡</p>
+            <p>This game was made in 2.5 hours </p>
+        </div>
+    </div>
+
+    <div id="game-container" class="game-container hidden">
+        <h1 id="gameTitle"></h1>
+        <div class="game-info">
+            <div class="timer">Time: <span id="timer">00:00</span></div>
+            <div class="score">Found: <span id="score">0</span> / <span id="totalDifferences"></span></div>
+        </div>
+        <div class="images-container">
+            <div class="image-wrapper">
+                <img id="image1" src="" alt="Original Image" class="game-image">
+            </div>
+            <div class="image-wrapper">
+                <img id="image2" src="" alt="Modified Image" class="game-image">
+            </div>
+        </div>
+        <div id="gameComplete" class="hidden">
+            <h2>🎉 Congratulations! You found all differences!</h2>
+            <p>Time: <span id="finalTime"></span></p>
+            <button id="resetButton">Play Again</button>
+            <button id="menuButton">Back to Menu</button>
+        </div>
+    </div>
+    <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+    <audio id="successSound" src="success.mp3" preload="auto"></audio>
+    <audio id="completeSound" src="complete.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
